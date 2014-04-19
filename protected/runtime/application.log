@@ -1,0 +1,180 @@
+2013/12/31 07:16:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in E:\phpcase\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\phpcase\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 E:\phpcase\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\phpcase\tvbaction\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/tvbaction/
+---
+2013/12/31 07:16:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in E:\phpcase\tvbaction\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\phpcase\tvbaction\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 E:\phpcase\tvbaction\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\phpcase\tvbaction\backend.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/tvbaction/backend.php
+---
+2013/12/31 07:16:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in E:\phpcase\tvbaction\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\phpcase\tvbaction\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 E:\phpcase\tvbaction\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\phpcase\tvbaction\backend.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/tvbaction/backend.php
+---
+2013/12/31 07:19:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in E:\phpcase\tvbaction\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\phpcase\tvbaction\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 E:\phpcase\tvbaction\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\phpcase\tvbaction\backend.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/tvbaction/backend.php
+---
+2013/12/31 07:19:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in E:\phpcase\tvbaction\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\phpcase\tvbaction\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 E:\phpcase\tvbaction\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\phpcase\tvbaction\backend.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/tvbaction/backend.php
+---
+2013/12/31 07:20:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in E:\phpcase\tvbaction\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\phpcase\tvbaction\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 E:\phpcase\tvbaction\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\phpcase\tvbaction\backend.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/tvbaction/backend.php
+---
+2013/12/31 07:20:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in E:\phpcase\tvbaction\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\phpcase\tvbaction\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 E:\phpcase\tvbaction\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\phpcase\tvbaction\backend.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/tvbaction/backend.php
+---
+2013/12/31 07:20:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in E:\phpcase\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\phpcase\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 E:\phpcase\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\phpcase\tvbaction\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/tvbaction/index.php
+---
+2013/12/31 07:20:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in E:\phpcase\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\phpcase\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 E:\phpcase\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\phpcase\tvbaction\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/tvbaction/index.php
+---
+2013/12/31 07:20:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in E:\phpcase\tvbaction\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\phpcase\tvbaction\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 E:\phpcase\tvbaction\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\phpcase\tvbaction\backend.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/tvbaction/backend.php
+---
+2013/12/31 07:21:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in E:\phpcase\tvbaction\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\phpcase\tvbaction\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 E:\phpcase\tvbaction\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\phpcase\tvbaction\backend.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/tvbaction/backend.php
+---
+2013/12/31 07:26:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in E:\phpcase\tvbaction\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\phpcase\tvbaction\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 E:\phpcase\tvbaction\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\phpcase\tvbaction\backend.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/tvbaction/backend.php
+---
+2013/12/31 07:26:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in E:\phpcase\tvbaction\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\phpcase\tvbaction\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 E:\phpcase\tvbaction\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\phpcase\tvbaction\backend.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/tvbaction/backend.php
+---
+2013/12/31 07:26:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in E:\phpcase\tvbaction\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\phpcase\tvbaction\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 E:\phpcase\tvbaction\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\phpcase\tvbaction\backend.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/tvbaction/backend.php
+---
+2013/12/31 07:41:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in E:\phpcase\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\phpcase\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 E:\phpcase\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\phpcase\tvbaction\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/tvbaction/index.php
+---
+2013/12/31 07:44:47 [error] [exception.CException] exception 'CException' with message 'Alias "setting.setting" is invalid. Make sure it points to an existing directory or file.' in E:\phpcase\yii\framework\YiiBase.php:341
+Stack trace:
+#0 E:\phpcase\yii\framework\gii\generators\crud\CrudCode.php(59): YiiBase::import('setting.setting', true)
+#1 E:\phpcase\yii\framework\validators\CInlineValidator.php(42): CrudCode->validateModel('model', Array)
+#2 E:\phpcase\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(CrudCode), 'model')
+#3 E:\phpcase\yii\framework\base\CModel.php(159): CValidator->validate(Object(CrudCode), NULL)
+#4 E:\phpcase\yii\framework\gii\CCodeGenerator.php(159): CModel->validate()
+#5 E:\phpcase\yii\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#6 E:\phpcase\yii\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#7 E:\phpcase\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 E:\phpcase\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 E:\phpcase\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 E:\phpcase\yii\framework\web\CWebApplication.php(282): CController->run('')
+#11 E:\phpcase\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/crud')
+#12 E:\phpcase\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#13 E:\phpcase\tvbaction\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/tvbaction/index.php?r=gii/crud
+HTTP_REFERER=http://localhost/tvbaction/index.php?r=gii/crud
+---
+2013/12/31 07:50:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in E:\phpcase\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\phpcase\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 E:\phpcase\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\phpcase\tvbaction\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/tvbaction/
+---
+2013/12/31 10:38:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in E:\phpcase\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\phpcase\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 E:\phpcase\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\phpcase\tvbaction\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/tvbaction/
+---
+2014/01/23 07:54:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in E:\phpcase\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\phpcase\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 E:\phpcase\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\phpcase\tvbaction\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/tvbaction/
+---
+2014/01/24 09:18:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in E:\phpcase\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\phpcase\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 E:\phpcase\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 E:\phpcase\tvbaction\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/tvbaction/index.php/gii
+---
+2014/03/04 14:16:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in F:\PHPCASE\tvbaction\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\PHPCASE\tvbaction\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 F:\PHPCASE\tvbaction\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 F:\PHPCASE\tvbaction\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/tvbaction/index.php
+---
