@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<playerkinds>
+	<player open="1" sort="0" postfix="qvod" flag="qvod" des="快播Qvod"><intro>&lt;a href="http://www.kuaibo.com" target="_blank"&gt;需要下载快播QVOD播放器&lt;/a&gt;</intro></player>
+	<player open="1" sort="0" postfix="bdhd" flag="百度影音" des="P2P"><intro>&lt;a href="http://player.baidu.com" target="_blank"&gt;需要下载百度影音播放器&lt;/a&gt;</intro></player>
+	<player open="1" sort="0" postfix="gvod" flag="迅播高清" des="P2P"><intro>&lt;a href="http://js.getgvod.com/" target="_blank"&gt;需要下载迅播GVOD播放器&lt;/a&gt;</intro></player>
+	<player open="1" sort="0" postfix="swf" flag="SWF数据" des="绝对地址SWF文件"><intro>无需安装任何插件</intro></player>
+	<player open="1" sort="0" postfix="youku" flag="优酷" des="优酷"><intro>无需安装任何插件</intro></player>
+	<player open="1" sort="0" postfix="tudou" flag="土豆" des="www.tudou.com"><intro>无需安装任何插件，即可快速播放</intro></player>
+	<player open="1" sort="0" postfix="ku6" flag="ku6视频" des="www.ku6.com"><intro>无需安装任何插件，即可快速播放</intro></player>
+	<player open="1" sort="0" postfix="hd_56" flag="56高清" des="tv.56.com"><intro>无需安装任何插件，即可快速播放</intro></player>
+	<player open="1" sort="0" postfix="iask" flag="新浪" des="you.video.sina.com.cn"><intro>无需安装任何插件，即可快速播放</intro></player>
+	<player open="1" sort="0" postfix="he_iask" flag="新浪高清" des="video.sina.com.cn"><intro>无需安装任何插件，即可快速播放</intro></player>	
+	<player open="1" sort="0" postfix="media" flag="media" des="wmv,asf等格式"><intro>无需安装任何插件</intro></player>
+	<player open="1" sort="0" postfix="real" flag="real" des="rm,rmvb等格式"><intro>需要电脑支持RealOne播放器</intro></player>
+	<player open="1" sort="0" postfix="sohu" flag="搜狐" des="sohu.com"><intro>无需安装任何插件，即可快速播放</intro></player>
+	<player open="1" sort="0" postfix="6rooms" flag="六间房" des="6.cn"><intro>无需安装任何插件，即可快速播放</intro></player>
+	<player open="1" sort="0" postfix="qq" flag="qq播客" des="video.qq.com"><intro>无需安装任何插件，即可快速播放</intro></player>
+	<player open="1" sort="0" postfix="pps" flag="ppstream" des="P2P"><intro>&lt;a href="http://dl.pps.tv" target="_blank"&gt;需要下载PPSream播放器&lt;/a&gt;</intro></player>
+	<player open="1" sort="0" postfix="jidong" flag="激动" des="www.joy.cn"><intro>无需安装任何插件，即可快速播放</intro></player>
+	<player open="1" sort="0" postfix="qiyi" flag="奇艺" des="www.qiyi.com"><intro>无需安装任何插件，即可快速播放</intro></player>
+	<player open="1" sort="0" postfix="webplayer9" flag="久久影音" des="www.webplayer9.com"><intro>适合已装wp9的网吧及带宽稳定的用户</intro></player>
+	<player open="1" sort="0" postfix="flv" flag="flv" des="支持绝对路径的flv,swf,mp4文件播放"><intro>无需安装任何插件，即可快速播放</intro></player>
+	<player open="1" sort="0" postfix="flashPvod" flag="闪播Pvod" des="P2P"><intro>&lt;a href="http://www.pvod.cn" target="_blank"&gt;需要下载PVOD播放器&lt;/a&gt;</intro></player>
+</playerkinds>
