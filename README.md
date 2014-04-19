@@ -1,2 +1,1 @@
-测试
-C:\Program Files\Git\git-cheetah\..\bin\git.exe
+开源影视系统
