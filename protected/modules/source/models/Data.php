@@ -156,7 +156,8 @@ class Data extends CActiveRecord
             'id'=>'state_'.$this->id,
         ));
         $state = $this->state==0 ? '' : "&nbsp;&nbsp;".$url;
-        echo "<font color = \"{$this->color}\" >".$this->name."</font>".$state;
+        $image = empty($this->pic) ? '' : "<img src=".Yii::app()->theme->baseUrl."/images/picture.png style='margin-right:5px;cursor: pointer;' class='title2div' title='<img src=".Yii::app()->request->baseUrl."/upload/".$this->pic." >' >";
+        echo $image."<font color = \"{$this->color}\" >".$this->name."</font>".$state;
     }
 
     /*
@@ -284,6 +285,7 @@ class Data extends CActiveRecord
 		$criteria->compare('lang',$this->lang,true);
 		$criteria->compare('score',$this->score,true);
 		$criteria->compare('extratype',$this->extratype,true);
+        $criteria->order = 'updatetime DESC';
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

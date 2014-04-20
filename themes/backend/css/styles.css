@@ -132,3 +132,7 @@ footer .copy {
 footer {
     text-align:center
 }
+/* #titlediv_jq{} 固定DIV宽度 */
+.title_div{background:#FFF; border:1px #CCC solid; padding:5px; line-height:20px; position:absolute; z-index:9999; color:#F60; word-break:break-all;} /* title标签内容转div js函数样式
+/* 圆角，CSS3支持 */
+.rounded{border:1px #CCC solid; background:#FFF; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px;}

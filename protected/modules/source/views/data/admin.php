@@ -6,6 +6,7 @@ $this->menu=array(
     array('label'=>SourceModule::t('Create Data'),'icon' => 'plus','url'=>array('create')),
 );
 ?>
+<?php  Yii::app()->getClientScript()->registerScriptFile(Yii::app()->theme->baseUrl.'/js/common.js',CClientScript::POS_END);?>
 <?php $this->beginWidget('bootstrap.widgets.TbModal', array('id'=>'myModal')); ?>
 <div class="modal-header">
     <a class="close" data-dismiss="modal">&times;</a>
@@ -42,7 +43,7 @@ $this->menu=array(
                 $("#myModal").modal("show");
             });
         });
-        $('.modal').on('hidden', function() { $(this).removeData(); })
+        $('.modal').on('hidden', function() { $(this).removeData(); });
         $('#savestate').click(
             function(ev){
               var act = $("#act").val();
@@ -115,6 +116,8 @@ $this->menu=array(
                 }
             }
         );
+
+        zen.title2div('title2div');
 
     });
 

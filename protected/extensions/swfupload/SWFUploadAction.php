@@ -9,7 +9,8 @@
 
 class SWFUploadAction extends CAction
 {
-    public $filepath='';//文件路径 c:/wamp/www/a.EXT 
+    public $filename='';//文件路径 c:/wamp/www/a.EXT
+    public $uploaddir = ''; //文件存放的文件夹
     protected  $callbackJS = '';
     
     public function run()
@@ -36,8 +37,15 @@ class SWFUploadAction extends CAction
             Yii::app()->getRequest()->redirect(Yii::app ()->homeUrl);
             return ;
         }
-        $this->callbackJS = isset($_POST['callbackJS'])?$_POST['callbackJS']:'';	    
-	    if($this->filepath ==='')
+
+        $this->uploaddir = empty($this->uploaddir) ? Yii::app()->basePath.'/../upload/' : trim($this->uploaddir);
+
+        if(!is_dir($this->uploaddir)){
+           throw new Exception('文件目录没有指定');
+        }
+
+        $this->callbackJS = isset($_POST['callbackJS'])?$_POST['callbackJS']:'';
+	    if($this->filename ==='')
 	    {
 	         throw new Exception('文件路径没有指定');
 	    }
@@ -53,20 +61,19 @@ class SWFUploadAction extends CAction
          $file = CUploadedFile::getInstanceByName('Filedata'); 
 	     
          $this->onBeforeUpload(new CEvent(array('uploadedFile'=>&$file)));
-	     $this->filepath = str_replace('.EXT','.'.$file->extensionName,$this->filepath);
 
-	     $filename = substr(strrchr($this->filepath,'/'),1);
-	     $this->filepath = str_replace('\\','/',$this->filepath);
-	     $filedir = str_replace(array("/$filename",Yii::app()->params['uploadDir']),'',$this->filepath);
-	        
-	     if(!is_dir(Yii::app()->params['uploadDir'].$filedir))
-	     {
-	           mkdir(Yii::app()->params['uploadDir'].$filedir, 0777,true); 
-	     }
-	     $file->saveAs($this->filepath);
-	     $_SESSION['temp_file'] = $this->filepath;
-	     echo 'JS:('.$this->callbackJS.")('$filename','$filedir','{$file->getName()}');";
-	     $this->onAfterUpload(new CEvent(array('uploadedFile'=>&$file,'name'=>$filename,'path'=>$filedir)));
-	     return $this->filepath;
+	     $this->filename = str_replace('.EXT','.'.$file->extensionName,$this->filename);
+
+         $filepath =$this->uploaddir.$this->filename;
+
+	     $filepath = str_replace('\\','/',$filepath);
+
+	     $file->saveAs($filepath);
+	     $_SESSION['temp_file'] = $filepath;
+         $dir = substr(strrchr(dirname($filepath), "/"), 1);
+	     echo 'JS:('.$this->callbackJS.")('$this->filename','$dir');";
+	     $this->onAfterUpload(new CEvent(array('uploadedFile'=>&$file,'name'=>$this->filename,'path'=>$this->uploaddir)));
+	     return $filepath;
    }
+
 }

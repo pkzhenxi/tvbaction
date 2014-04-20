@@ -22,7 +22,8 @@ class DataController extends Controller
         return array(
             'upload'=>array(
                 'class'=>'ext.swfupload.SWFUploadAction',
-                'filepath'=>F::mkpath(Yii::app()->basePath.'/../upload/'.date('Ym').'/').uniqid().'.EXT', //注意这里是绝对路径,.EXT是文件后缀名替代符号
+                'uploaddir'=>F::mkpath(Yii::app()->basePath.'/../upload/'.date('Ym').'/'),
+                'filename'=>uniqid().'.EXT', //注意这里是绝对路径,.EXT是文件后缀名替代符号
                 'onAfterUpload'=>array($this,'saveFile'),
             ),
             'toggle' => array(
@@ -34,13 +35,12 @@ class DataController extends Controller
     }
 
     public function actionTestFile(){
-       $filepath = F::mkpath(Yii::app()->basePath.'/../upload/'.date('Ym').'/').uniqid().'.EXT';
+       $filepath = uniqid().'.EXT';
        $filepath = str_replace('.EXT','.jpg',$filepath);
-       echo $filepath.'<br>';
+       $updir = F::mkpath(Yii::app()->basePath.'/../upload/'.date('Ym').'/');
+       $filepath =$updir.$filepath;
        $filepath = str_replace('\\','/',$filepath);
-       echo $filepath.'<br>';
-       $filename = substr(strrchr($filepath,'/'),1);
-       echo $filename;
+       echo substr(strrchr(dirname($filepath), "/"), 1);
     }
 
     /** 进行裁剪、打水印等其它处理 */
@@ -50,7 +50,7 @@ class DataController extends Controller
         //$event->sender['uploadedFile']->name; the original name of the file being uploaded
         // $event->sender['name']  yourfilename.EXT
         // do something   ......
-        $url = Yii::app()->basePath.'/../upload/'.$event->sender['name'];
+        $url = $event->sender['path'].$event->sender['name'];
         if(is_file($url)){
            $pic = new Picture();
            $pic->cut['file'] = $url;

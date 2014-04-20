@@ -75,10 +75,11 @@
                             ));
                         ?>
                       <script type="text/javascript">
-                            function swfupload_callback(name,path,oldname)
+                            function swfupload_callback(name,dir)
                             {
-                                $("#Data_pic").val(name);
-                                $("#thumbnails_1").html("<img src='"+"<?php echo Yii::app()->baseUrl; ?>/upload/<?php echo date('Ym'); ?>/"+name+"?"+(new Date()).getTime()+"' />");
+                                var v = dir+'/'+name;
+                                $("#Data_pic").val(v);
+                                $("#thumbnails_1").html("<img src='"+"<?php echo Yii::app()->baseUrl; ?>/upload/"+v+"?"+(new Date()).getTime()+"' />");
                             }
                         </script>
                     </td>

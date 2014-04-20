@@ -7352,3 +7352,254 @@ Stack trace:
 REQUEST_URI=/tvbaction/backend.php/source/data/Datasubmit
 HTTP_REFERER=http://localhost/tvbaction/backend.php/source/data/admin
 ---
+2014/04/20 09:16:41 [error] [php] move_uploaded_file() [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: The second argument to copy() function cannot be a directory (F:\PHPCASE\tvbgit\framework\web\CUploadedFile.php:196)
+Stack trace:
+#0 F:\PHPCASE\tvbgit\protected\extensions\swfupload\SWFUploadAction.php(19): SWFUploadAction->upload()
+#1 F:\PHPCASE\tvbgit\framework\web\actions\CAction.php(76): SWFUploadAction->run()
+#2 F:\PHPCASE\tvbgit\framework\web\CController.php(308): SWFUploadAction->runWithParams()
+#3 F:\PHPCASE\tvbgit\framework\web\filters\CFilterChain.php(133): DataController->runAction()
+#4 F:\PHPCASE\tvbgit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 F:\PHPCASE\tvbgit\framework\web\filters\CFilterChain.php(130): AuthFilter->filter()
+#6 F:\PHPCASE\tvbgit\framework\web\CController.php(291): CFilterChain->run()
+#7 F:\PHPCASE\tvbgit\framework\web\CController.php(265): DataController->runActionWithFilters()
+#8 F:\PHPCASE\tvbgit\framework\web\CWebApplication.php(282): DataController->run()
+#9 F:\PHPCASE\tvbgit\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 F:\PHPCASE\tvbgit\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 F:\PHPCASE\tvbgit\backend.php(14): CWebApplication->run()
+REQUEST_URI=/tvbgit/backend.php/source/data/upload
+in F:\PHPCASE\tvbgit\protected\extensions\swfupload\SWFUploadAction.php (68)
+in F:\PHPCASE\tvbgit\protected\extensions\swfupload\SWFUploadAction.php (19)
+in F:\PHPCASE\tvbgit\backend.php (14)
+2014/04/20 09:31:26 [error] [exception.Exception] exception 'Exception' with message '文件目录没有指定' in F:\PHPCASE\tvbgit\protected\extensions\swfupload\SWFUploadAction.php:42
+Stack trace:
+#0 F:\PHPCASE\tvbgit\protected\extensions\swfupload\SWFUploadAction.php(18): SWFUploadAction->init()
+#1 F:\PHPCASE\tvbgit\framework\web\actions\CAction.php(76): SWFUploadAction->run()
+#2 F:\PHPCASE\tvbgit\framework\web\CController.php(308): CAction->runWithParams(Array)
+#3 F:\PHPCASE\tvbgit\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(SWFUploadAction))
+#4 F:\PHPCASE\tvbgit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 F:\PHPCASE\tvbgit\framework\web\filters\CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#6 F:\PHPCASE\tvbgit\framework\web\CController.php(291): CFilterChain->run()
+#7 F:\PHPCASE\tvbgit\framework\web\CController.php(265): CController->runActionWithFilters(Object(SWFUploadAction), Array)
+#8 F:\PHPCASE\tvbgit\framework\web\CWebApplication.php(282): CController->run('upload')
+#9 F:\PHPCASE\tvbgit\framework\web\CWebApplication.php(141): CWebApplication->runController('source/data/upl...')
+#10 F:\PHPCASE\tvbgit\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 F:\PHPCASE\tvbgit\backend.php(14): CApplication->run()
+#12 {main}
+REQUEST_URI=/tvbgit/backend.php/source/data/upload
+HTTP_REFERER=http://localhost/tvbgit/backend.php/source/data/create
+---
+2014/04/20 09:32:44 [error] [exception.Exception] exception 'Exception' with message '文件目录没有指定' in F:\PHPCASE\tvbgit\protected\extensions\swfupload\SWFUploadAction.php:42
+Stack trace:
+#0 F:\PHPCASE\tvbgit\protected\extensions\swfupload\SWFUploadAction.php(18): SWFUploadAction->init()
+#1 F:\PHPCASE\tvbgit\framework\web\actions\CAction.php(76): SWFUploadAction->run()
+#2 F:\PHPCASE\tvbgit\framework\web\CController.php(308): CAction->runWithParams(Array)
+#3 F:\PHPCASE\tvbgit\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(SWFUploadAction))
+#4 F:\PHPCASE\tvbgit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 F:\PHPCASE\tvbgit\framework\web\filters\CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#6 F:\PHPCASE\tvbgit\framework\web\CController.php(291): CFilterChain->run()
+#7 F:\PHPCASE\tvbgit\framework\web\CController.php(265): CController->runActionWithFilters(Object(SWFUploadAction), Array)
+#8 F:\PHPCASE\tvbgit\framework\web\CWebApplication.php(282): CController->run('upload')
+#9 F:\PHPCASE\tvbgit\framework\web\CWebApplication.php(141): CWebApplication->runController('source/data/upl...')
+#10 F:\PHPCASE\tvbgit\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 F:\PHPCASE\tvbgit\backend.php(14): CApplication->run()
+#12 {main}
+REQUEST_URI=/tvbgit/backend.php/source/data/upload
+HTTP_REFERER=http://localhost/tvbgit/backend.php/source/data/create
+---
+2014/04/20 09:35:04 [error] [exception.Exception] exception 'Exception' with message '文件目录没有指定' in F:\PHPCASE\tvbgit\protected\extensions\swfupload\SWFUploadAction.php:42
+Stack trace:
+#0 F:\PHPCASE\tvbgit\protected\extensions\swfupload\SWFUploadAction.php(18): SWFUploadAction->init()
+#1 F:\PHPCASE\tvbgit\framework\web\actions\CAction.php(76): SWFUploadAction->run()
+#2 F:\PHPCASE\tvbgit\framework\web\CController.php(308): CAction->runWithParams(Array)
+#3 F:\PHPCASE\tvbgit\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(SWFUploadAction))
+#4 F:\PHPCASE\tvbgit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 F:\PHPCASE\tvbgit\framework\web\filters\CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#6 F:\PHPCASE\tvbgit\framework\web\CController.php(291): CFilterChain->run()
+#7 F:\PHPCASE\tvbgit\framework\web\CController.php(265): CController->runActionWithFilters(Object(SWFUploadAction), Array)
+#8 F:\PHPCASE\tvbgit\framework\web\CWebApplication.php(282): CController->run('upload')
+#9 F:\PHPCASE\tvbgit\framework\web\CWebApplication.php(141): CWebApplication->runController('source/data/upl...')
+#10 F:\PHPCASE\tvbgit\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 F:\PHPCASE\tvbgit\backend.php(14): CApplication->run()
+#12 {main}
+REQUEST_URI=/tvbgit/backend.php/source/data/upload
+HTTP_REFERER=http://localhost/tvbgit/backend.php/source/data/create
+---
+2014/04/20 09:36:19 [error] [exception.Exception] exception 'Exception' with message '文件目录没有指定' in F:\PHPCASE\tvbgit\protected\extensions\swfupload\SWFUploadAction.php:42
+Stack trace:
+#0 F:\PHPCASE\tvbgit\protected\extensions\swfupload\SWFUploadAction.php(18): SWFUploadAction->init()
+#1 F:\PHPCASE\tvbgit\framework\web\actions\CAction.php(76): SWFUploadAction->run()
+#2 F:\PHPCASE\tvbgit\framework\web\CController.php(308): CAction->runWithParams(Array)
+#3 F:\PHPCASE\tvbgit\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(SWFUploadAction))
+#4 F:\PHPCASE\tvbgit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 F:\PHPCASE\tvbgit\framework\web\filters\CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#6 F:\PHPCASE\tvbgit\framework\web\CController.php(291): CFilterChain->run()
+#7 F:\PHPCASE\tvbgit\framework\web\CController.php(265): CController->runActionWithFilters(Object(SWFUploadAction), Array)
+#8 F:\PHPCASE\tvbgit\framework\web\CWebApplication.php(282): CController->run('upload')
+#9 F:\PHPCASE\tvbgit\framework\web\CWebApplication.php(141): CWebApplication->runController('source/data/upl...')
+#10 F:\PHPCASE\tvbgit\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 F:\PHPCASE\tvbgit\backend.php(14): CApplication->run()
+#12 {main}
+REQUEST_URI=/tvbgit/backend.php/source/data/upload
+HTTP_REFERER=http://localhost/tvbgit/backend.php/source/data/create
+---
+2014/04/20 09:37:08 [error] [exception.Exception] exception 'Exception' with message '文件目录没有指定' in F:\PHPCASE\tvbgit\protected\extensions\swfupload\SWFUploadAction.php:42
+Stack trace:
+#0 F:\PHPCASE\tvbgit\protected\extensions\swfupload\SWFUploadAction.php(18): SWFUploadAction->init()
+#1 F:\PHPCASE\tvbgit\framework\web\actions\CAction.php(76): SWFUploadAction->run()
+#2 F:\PHPCASE\tvbgit\framework\web\CController.php(308): CAction->runWithParams(Array)
+#3 F:\PHPCASE\tvbgit\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(SWFUploadAction))
+#4 F:\PHPCASE\tvbgit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 F:\PHPCASE\tvbgit\framework\web\filters\CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#6 F:\PHPCASE\tvbgit\framework\web\CController.php(291): CFilterChain->run()
+#7 F:\PHPCASE\tvbgit\framework\web\CController.php(265): CController->runActionWithFilters(Object(SWFUploadAction), Array)
+#8 F:\PHPCASE\tvbgit\framework\web\CWebApplication.php(282): CController->run('upload')
+#9 F:\PHPCASE\tvbgit\framework\web\CWebApplication.php(141): CWebApplication->runController('source/data/upl...')
+#10 F:\PHPCASE\tvbgit\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 F:\PHPCASE\tvbgit\backend.php(14): CApplication->run()
+#12 {main}
+REQUEST_URI=/tvbgit/backend.php/source/data/upload
+HTTP_REFERER=http://localhost/tvbgit/backend.php/source/data/create
+---
+2014/04/20 09:37:25 [error] [exception.Exception] exception 'Exception' with message '文件目录没有指定' in F:\PHPCASE\tvbgit\protected\extensions\swfupload\SWFUploadAction.php:42
+Stack trace:
+#0 F:\PHPCASE\tvbgit\protected\extensions\swfupload\SWFUploadAction.php(18): SWFUploadAction->init()
+#1 F:\PHPCASE\tvbgit\framework\web\actions\CAction.php(76): SWFUploadAction->run()
+#2 F:\PHPCASE\tvbgit\framework\web\CController.php(308): CAction->runWithParams(Array)
+#3 F:\PHPCASE\tvbgit\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(SWFUploadAction))
+#4 F:\PHPCASE\tvbgit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 F:\PHPCASE\tvbgit\framework\web\filters\CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#6 F:\PHPCASE\tvbgit\framework\web\CController.php(291): CFilterChain->run()
+#7 F:\PHPCASE\tvbgit\framework\web\CController.php(265): CController->runActionWithFilters(Object(SWFUploadAction), Array)
+#8 F:\PHPCASE\tvbgit\framework\web\CWebApplication.php(282): CController->run('upload')
+#9 F:\PHPCASE\tvbgit\framework\web\CWebApplication.php(141): CWebApplication->runController('source/data/upl...')
+#10 F:\PHPCASE\tvbgit\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 F:\PHPCASE\tvbgit\backend.php(14): CApplication->run()
+#12 {main}
+REQUEST_URI=/tvbgit/backend.php/source/data/upload
+HTTP_REFERER=http://localhost/tvbgit/backend.php/source/data/create
+---
+2014/04/20 09:42:22 [error] [exception.Exception] exception 'Exception' with message '文件目录没有指定' in F:\PHPCASE\tvbgit\protected\extensions\swfupload\SWFUploadAction.php:43
+Stack trace:
+#0 F:\PHPCASE\tvbgit\protected\extensions\swfupload\SWFUploadAction.php(18): SWFUploadAction->init()
+#1 F:\PHPCASE\tvbgit\framework\web\actions\CAction.php(76): SWFUploadAction->run()
+#2 F:\PHPCASE\tvbgit\framework\web\CController.php(308): CAction->runWithParams(Array)
+#3 F:\PHPCASE\tvbgit\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(SWFUploadAction))
+#4 F:\PHPCASE\tvbgit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 F:\PHPCASE\tvbgit\framework\web\filters\CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#6 F:\PHPCASE\tvbgit\framework\web\CController.php(291): CFilterChain->run()
+#7 F:\PHPCASE\tvbgit\framework\web\CController.php(265): CController->runActionWithFilters(Object(SWFUploadAction), Array)
+#8 F:\PHPCASE\tvbgit\framework\web\CWebApplication.php(282): CController->run('upload')
+#9 F:\PHPCASE\tvbgit\framework\web\CWebApplication.php(141): CWebApplication->runController('source/data/upl...')
+#10 F:\PHPCASE\tvbgit\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 F:\PHPCASE\tvbgit\backend.php(14): CApplication->run()
+#12 {main}
+REQUEST_URI=/tvbgit/backend.php/source/data/upload
+HTTP_REFERER=http://localhost/tvbgit/backend.php/source/data/create
+---
+2014/04/20 09:44:47 [error] [exception.CException] exception 'CException' with message '属性 "SWFUploadAction.filepath" 未被定义.' in F:\PHPCASE\tvbgit\framework\base\CComponent.php:130
+Stack trace:
+#0 F:\PHPCASE\tvbgit\protected\extensions\swfupload\SWFUploadAction.php(75): CComponent->__get('filepath')
+#1 F:\PHPCASE\tvbgit\protected\extensions\swfupload\SWFUploadAction.php(19): SWFUploadAction->upload()
+#2 F:\PHPCASE\tvbgit\framework\web\actions\CAction.php(76): SWFUploadAction->run()
+#3 F:\PHPCASE\tvbgit\framework\web\CController.php(308): CAction->runWithParams(Array)
+#4 F:\PHPCASE\tvbgit\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(SWFUploadAction))
+#5 F:\PHPCASE\tvbgit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 F:\PHPCASE\tvbgit\framework\web\filters\CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#7 F:\PHPCASE\tvbgit\framework\web\CController.php(291): CFilterChain->run()
+#8 F:\PHPCASE\tvbgit\framework\web\CController.php(265): CController->runActionWithFilters(Object(SWFUploadAction), Array)
+#9 F:\PHPCASE\tvbgit\framework\web\CWebApplication.php(282): CController->run('upload')
+#10 F:\PHPCASE\tvbgit\framework\web\CWebApplication.php(141): CWebApplication->runController('source/data/upl...')
+#11 F:\PHPCASE\tvbgit\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#12 F:\PHPCASE\tvbgit\backend.php(14): CApplication->run()
+#13 {main}
+REQUEST_URI=/tvbgit/backend.php/source/data/upload
+HTTP_REFERER=http://localhost/tvbgit/backend.php/source/data/create
+---
+2014/04/20 09:45:02 [error] [exception.CException] exception 'CException' with message '属性 "SWFUploadAction.filepath" 未被定义.' in F:\PHPCASE\tvbgit\framework\base\CComponent.php:130
+Stack trace:
+#0 F:\PHPCASE\tvbgit\protected\extensions\swfupload\SWFUploadAction.php(75): CComponent->__get('filepath')
+#1 F:\PHPCASE\tvbgit\protected\extensions\swfupload\SWFUploadAction.php(19): SWFUploadAction->upload()
+#2 F:\PHPCASE\tvbgit\framework\web\actions\CAction.php(76): SWFUploadAction->run()
+#3 F:\PHPCASE\tvbgit\framework\web\CController.php(308): CAction->runWithParams(Array)
+#4 F:\PHPCASE\tvbgit\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(SWFUploadAction))
+#5 F:\PHPCASE\tvbgit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 F:\PHPCASE\tvbgit\framework\web\filters\CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#7 F:\PHPCASE\tvbgit\framework\web\CController.php(291): CFilterChain->run()
+#8 F:\PHPCASE\tvbgit\framework\web\CController.php(265): CController->runActionWithFilters(Object(SWFUploadAction), Array)
+#9 F:\PHPCASE\tvbgit\framework\web\CWebApplication.php(282): CController->run('upload')
+#10 F:\PHPCASE\tvbgit\framework\web\CWebApplication.php(141): CWebApplication->runController('source/data/upl...')
+#11 F:\PHPCASE\tvbgit\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#12 F:\PHPCASE\tvbgit\backend.php(14): CApplication->run()
+#13 {main}
+REQUEST_URI=/tvbgit/backend.php/source/data/upload
+HTTP_REFERER=http://localhost/tvbgit/backend.php/source/data/create
+---
+2014/04/20 10:36:30 [error] [exception.CException] exception 'CException' with message '属性 "CActiveDataProvider.order" 未被定义.' in F:\PHPCASE\tvbgit\framework\base\CComponent.php:173
+Stack trace:
+#0 F:\PHPCASE\tvbgit\framework\web\CActiveDataProvider.php(83): CComponent->__set('order', 'updatetime DESC')
+#1 F:\PHPCASE\tvbgit\protected\modules\source\models\Data.php(294): CActiveDataProvider->__construct(Object(Data), Array)
+#2 F:\PHPCASE\tvbgit\protected\modules\source\views\data\admin.php(136): Data->search()
+#3 F:\PHPCASE\tvbgit\framework\web\CBaseController.php(126): require('F:\PHPCASE\tvbg...')
+#4 F:\PHPCASE\tvbgit\framework\web\CBaseController.php(95): CBaseController->renderInternal('F:\PHPCASE\tvbg...', Array, true)
+#5 F:\PHPCASE\tvbgit\framework\web\CController.php(869): CBaseController->renderFile('F:\PHPCASE\tvbg...', Array, true)
+#6 F:\PHPCASE\tvbgit\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#7 F:\PHPCASE\tvbgit\protected\modules\source\controllers\DataController.php(268): CController->render('admin', Array)
+#8 F:\PHPCASE\tvbgit\framework\web\actions\CInlineAction.php(49): DataController->actionAdmin()
+#9 F:\PHPCASE\tvbgit\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 F:\PHPCASE\tvbgit\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 F:\PHPCASE\tvbgit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 F:\PHPCASE\tvbgit\framework\web\filters\CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#13 F:\PHPCASE\tvbgit\framework\web\CController.php(291): CFilterChain->run()
+#14 F:\PHPCASE\tvbgit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 F:\PHPCASE\tvbgit\framework\web\CWebApplication.php(282): CController->run('admin')
+#16 F:\PHPCASE\tvbgit\framework\web\CWebApplication.php(141): CWebApplication->runController('source/data/adm...')
+#17 F:\PHPCASE\tvbgit\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#18 F:\PHPCASE\tvbgit\backend.php(14): CApplication->run()
+#19 {main}
+REQUEST_URI=/tvbgit/backend.php/source/data/admin
+HTTP_REFERER=http://localhost/tvbgit/backend.php/source/data/admin
+---
+2014/04/20 23:09:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "53379980ee1f5.jpg" 动作.' in F:\PHPCASE\tvbgit\framework\web\CController.php:483
+Stack trace:
+#0 F:\PHPCASE\tvbgit\framework\web\CController.php(270): CController->missingAction('53379980ee1f5.j...')
+#1 F:\PHPCASE\tvbgit\framework\web\CWebApplication.php(282): CController->run('53379980ee1f5.j...')
+#2 F:\PHPCASE\tvbgit\framework\web\CWebApplication.php(141): CWebApplication->runController('source/data/533...')
+#3 F:\PHPCASE\tvbgit\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 F:\PHPCASE\tvbgit\backend.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/tvbgit/backend.php/source/data/53379980ee1f5.jpg
+HTTP_REFERER=http://localhost/tvbgit/backend.php/source/data/admin
+---
+2014/04/20 23:10:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "53423bd906911.jpg" 动作.' in F:\PHPCASE\tvbgit\framework\web\CController.php:483
+Stack trace:
+#0 F:\PHPCASE\tvbgit\framework\web\CController.php(270): CController->missingAction('53423bd906911.j...')
+#1 F:\PHPCASE\tvbgit\framework\web\CWebApplication.php(282): CController->run('53423bd906911.j...')
+#2 F:\PHPCASE\tvbgit\framework\web\CWebApplication.php(141): CWebApplication->runController('source/data/534...')
+#3 F:\PHPCASE\tvbgit\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 F:\PHPCASE\tvbgit\backend.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/tvbgit/backend.php/source/data/53423bd906911.jpg
+HTTP_REFERER=http://localhost/tvbgit/backend.php/source/data/admin
+---
+2014/04/20 23:10:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "201404" 动作.' in F:\PHPCASE\tvbgit\framework\web\CController.php:483
+Stack trace:
+#0 F:\PHPCASE\tvbgit\framework\web\CController.php(270): CController->missingAction('201404')
+#1 F:\PHPCASE\tvbgit\framework\web\CWebApplication.php(282): CController->run('201404')
+#2 F:\PHPCASE\tvbgit\framework\web\CWebApplication.php(141): CWebApplication->runController('source/data/201...')
+#3 F:\PHPCASE\tvbgit\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 F:\PHPCASE\tvbgit\backend.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/tvbgit/backend.php/source/data/201404/5353314f34643.jpg
+HTTP_REFERER=http://localhost/tvbgit/backend.php/source/data/admin
+---
+2014/04/20 23:12:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "201404" 动作.' in F:\PHPCASE\tvbgit\framework\web\CController.php:483
+Stack trace:
+#0 F:\PHPCASE\tvbgit\framework\web\CController.php(270): CController->missingAction('201404')
+#1 F:\PHPCASE\tvbgit\framework\web\CWebApplication.php(282): CController->run('201404')
+#2 F:\PHPCASE\tvbgit\framework\web\CWebApplication.php(141): CWebApplication->runController('source/data/201...')
+#3 F:\PHPCASE\tvbgit\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 F:\PHPCASE\tvbgit\backend.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/tvbgit/backend.php/source/data/201404/5353314f34643.jpg
+HTTP_REFERER=http://localhost/tvbgit/backend.php/source/data/admin
+---
