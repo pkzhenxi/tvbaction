@@ -185,7 +185,7 @@ class Data extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
             'playdata' =>array(self::HAS_ONE,'Playdata','v_id'),
-            'datacontent'=>array(self::HAS_ONE,'Content','v_id'),
+            'datacontent'=>array(self::HAS_ONE,'Content','vid'),
             'vtopic'=>array(self::BELONGS_TO,'Topic','topic'),
             'category'=>array(self::BELONGS_TO,'Category','tid'),
 		);

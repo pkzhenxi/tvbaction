@@ -14,11 +14,8 @@
 ));
 ?>
 <?php echo $form->errorSummary($model,null,null,array('class'=>'alert alert-block alert-error')); ?>
-<?php Yii::app()->clientScript->registerScript(
-    'script'.$this->id,
-    "tvdata(1,true);",
-    CClientScript::POS_READY
-);
+<?php
+if($model->isNewRecord) Yii::app()->clientScript->registerScript('script'.$this->id,"tvdata(1,true);",CClientScript::POS_READY);
 ?>
 <table id="datatable">
     <tr>
@@ -29,8 +26,8 @@
                     <td><?php echo $form->textField($model,'name',array('class'=>'pic')); ?></td>
                     <td style="padding-left: 5px;">连载？</td>
                     <td>
-                        <input type="checkbox" onclick="isViewState()" id="v_statebox"/>
-                        <span id="v_statespan" style="display:none">到第
+                        <input type="checkbox" onclick="isViewState()" id="v_statebox" <?php if($model->state>0 && !$model->isNewRecord){ echo "checked"; } ?> />
+                        <span id="v_statespan" <?php if($model->state == 0 && !$model->isNewRecord ) echo "style=\"display:none\"" ?> >到第
                         <?php echo $form->textField($model,'state',array("style"=>"width:30px;")); ?>
                         集</span>
                     </td>
@@ -46,7 +43,17 @@
     <tr>
         <td><?php echo $form->labelEx($model,'extratype'); ?></td>
         <td>
-            <?php echo  $form->dropDownList($model,'extratype',Category::allVideoCategoriesDownList(),array('class'=>'extratype','encode'=>false,'multiple'=>"multiple")) ?>
+            <?php
+                $htmloptions = array('class'=>'extratype','encode'=>false,'multiple'=>"multiple");
+                if(!$model->isNewRecord && !empty($model->extratype)){
+                   $arrExtra = explode(',',$model->extratype);
+                   foreach($arrExtra as $value){
+                       $selected[$value]=array('selected' => true);
+                   }
+                   $htmloptions['options']=$selected;
+                }
+                echo  $form->dropDownList($model,'extratype',Category::allVideoCategoriesDownList(),$htmloptions);
+            ?>
             <span class="label label-important">注意</span>扩展分类：请按CTRL多选。
         </td>
     </tr>
@@ -72,6 +79,7 @@
                                 'callbackJS'=>'swfupload_callback',
                                 'fileTypes'=> '*.jpg;*.jpeg',
                                 'buttonText'=> '请选择jpg图片上传',
+                                'imgUrlList'=> (!$model->isNewRecord && !empty($model->pic)) ? array(Yii::app()->baseUrl."/upload/".$model->pic) : array(),
                             ));
                         ?>
                       <script type="text/javascript">
@@ -83,7 +91,6 @@
                             }
                         </script>
                     </td>
-                    <td id="thumbnails_1">&nbsp;</td>
                 </tr>
             </table>
         </td>
@@ -102,8 +109,8 @@
                         $this->widget('ext.starcommend.Starcommend',array(
                             'ajaxurl'=>$this->createUrl('data/ajax'),
                             'input_id'=>'Data_commend',
-                            'level' => '0',
-                            'vid' => '0',
+                            'level' => !$model->isNewRecord ? $model->commend : '0',
+                            'vid' => !$model->isNewRecord ? $model->id : '0',
                             'type' => '0',
                         ));
                         ?>
@@ -163,11 +170,11 @@
                 var str = isinit ? getOptions() : getOptions($("#v_playfrom"+(i+1)).val());
                 tdata += "<select id='v_playfrom"+(i+1)+"' name='playfrom[]'><option value=''>暂无数据</option>"+str+"</select>";
                 tdata += '<input type="button"  value="WEB采集" class="btn1">';
-               if(i == 0){
-                tdata += '数据地址单集格式：<span class="label label-success">标题$ID$来源</span>(如果多集就用行隔开)';
-                tdata += "<img src=\"<?php echo Yii::app()->theme->baseUrl."/images/btn_add.gif" ?>\" onclick=\"tvdata("+(items+1)+",false)\"; class=\"btn2\" title=\"添加播放来源\">";
-                tdata += "<img src=\"<?php echo Yii::app()->theme->baseUrl."/images/btn_dec.gif" ?>\" onclick=\"tvdata("+(items>1?items-1:1)+",false);\" class=\"btn2\" title=\"删除播放来源\">";
-               }
+                if(i == 0){
+                  tdata += '数据地址单集格式：<span class="label label-success">标题$ID$来源</span>(如果多集就用行隔开)';
+                  tdata += "<img src=\"<?php echo Yii::app()->theme->baseUrl."/images/btn_add.gif" ?>\" onclick=\"tvdata("+(items+1)+",false)\"; class=\"btn2\" title=\"添加播放来源\">";
+                  tdata += "<img src=\"<?php echo Yii::app()->theme->baseUrl."/images/btn_dec.gif" ?>\" onclick=\"tvdata("+(items>1?items-1:1)+",false);\" class=\"btn2\" title=\"删除播放来源\">";
+                }
                 tdata += '</td></tr>';
                 tdata += '<tr>';
                 tdata += "<td>数据地址：<br><input type='button'  value='校正' onclick='repairUrl("+(i+1)+")'></td>";
@@ -243,7 +250,47 @@
         }
     </script>
     <tr>
-        <td colspan="2" id="dataitems">&nbsp;</td>
+        <td colspan="2" id="dataitems">
+          <?php
+            $playdata = $model->playdata->body;
+            $playArray = explode("$$$",$playdata);
+            $k = count($playArray);
+            if($playdata != "" ){
+                for($j=0;$j<$k;$j++){
+                    $playArray2=explode("$$",$playArray[$j]);
+                    $pstr=$playArray2[0];
+                    //$purlstr=str_replace(chr(10),"",$playArray2[1]);
+                    $purlstr=$playArray2[1];
+                    if(strpos($playArray[$j],'$$')===false)
+                    {
+                        $pstr='';
+                        $purlstr=$playArray[$j];
+                    }
+                    $purlstr=str_replace("#",chr(13),$purlstr);
+          ?>
+          <table class="pictable" width="100%">
+                <tr>
+                    <td class="wid">播放来源：</td>
+                    <td>
+                        <select id="v_playfrom<?php echo $j+1; ?>" name="playfrom[]"><option value="">暂无数据</option><?php echo F::makePlayerSelect($pstr);?></select>
+                        <input type="button" value="WEB采集" class="btn1">
+                     <?php if ($j == 0){ ?>
+                        数据地址单集格式：<span class="label label-success">标题$ID$来源</span>(如果多集就用行隔开)
+                        <img src="<?php echo Yii::app()->theme->baseUrl."/images/btn_add.gif" ?>" onclick="tvdata(<?php echo $k+1; ?>,false)" class="btn2" title="添加播放来源">
+                        <img src="<?php echo Yii::app()->theme->baseUrl."/images/btn_dec.gif" ?>" onclick=" tvdata(<?php echo $k-1; ?>,false);" class="btn2" title="删除播放来源">
+                      <?php } ?>
+                    </td>
+                </tr>
+                <tr>
+                    <td>数据地址：<br><input type="button" value="校正" onclick="repairUrl(<?php echo $j+1; ?>)"></td>
+                    <td><textarea id="playurl<?php echo $j+1; ?>" name="playurl[]" rows="8" style="width:695px"><?php echo $purlstr; ?></textarea></td>
+                </tr>
+          </table>
+          <?php
+                }
+            }
+          ?>
+        </td>
     </tr>
     <?php $this->widget('ext.kindeditor.KindEditorWidget',array(
         'id'=>'tv_content',	//Textarea id
@@ -263,7 +310,7 @@
     )); ?>
     <tr>
         <td>影片介绍：</td>
-        <td class="bottomadding10"><?php echo CHtml::textArea('content','',array('visibility'=>'hidden','id'=>'tv_content'))?></td>
+        <td class="bottomadding10"><?php echo CHtml::textArea('content',$model->datacontent->body,array('visibility'=>'hidden','id'=>'tv_content'))?></td>
     </tr>
     <tr>
         <td>&nbsp;</td>

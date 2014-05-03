@@ -116,9 +116,7 @@ $this->menu=array(
                 }
             }
         );
-
         zen.title2div('title2div');
-
     });
 
     function checkid(){
@@ -131,7 +129,7 @@ $this->menu=array(
     }
 </script>
 <?php
-echo CHtml::form('Datasubmit','post',array('id'=>'form1','name'=>'datasubmit'));
+echo CHtml::form(array('data/datasubmit'),'post',array('id'=>'form1','name'=>'datasubmit'));
 $this->widget('bootstrap.widgets.TbGridView',array(
 'selectableRows' => 2,
 'id'=>'data-grid',
@@ -214,9 +212,9 @@ $this->widget('bootstrap.widgets.TbGridView',array(
             'filter'=>false,
             'value'=>'F::timetostr($data->updatetime)',
         ),
-array(
-'class'=>'bootstrap.widgets.TbButtonColumn',
-),
+        array(
+        'class'=>'bootstrap.widgets.TbButtonColumn',
+        ),
 ),
 )); ?>
 <table class="table">

@@ -153,4 +153,26 @@ class F {
         return $dir;
     }
 
+    public static function makePlayerSelect($flag)
+    {
+        $playerArray=array();
+        $m_file = Yii::app()->basePath."/../data/playerKinds.xml";
+        $allstr = '';
+        $xml = simplexml_load_file($m_file);
+        $i = 0;
+        $a = 0;
+        foreach($xml as $player){
+            $i++;
+            if($flag==$player['flag']){
+                $selectstr=" selected";
+            }else{
+                $selectstr="";
+            }
+            if($player['open']==1)
+                $allstr .="<option value='".$player['flag']."' $selectstr>".$player['flag']."</option>";
+
+        }
+        return $allstr;
+    }
+
 }

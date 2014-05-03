@@ -4,6 +4,7 @@ return array(
    'Category Mange' => '分类管理',
    'Data Mange' => '数据管理',
    'Create Data'=> '添加数据',
+    'Update Data'=>'更新数据',
     'Id' => 'ID',
     'Tid' => '视频分类',
     'Name' => '名称',

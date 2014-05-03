@@ -34,15 +34,6 @@ class DataController extends Controller
         );
     }
 
-    public function actionTestFile(){
-       $filepath = uniqid().'.EXT';
-       $filepath = str_replace('.EXT','.jpg',$filepath);
-       $updir = F::mkpath(Yii::app()->basePath.'/../upload/'.date('Ym').'/');
-       $filepath =$updir.$filepath;
-       $filepath = str_replace('\\','/',$filepath);
-       echo substr(strrchr(dirname($filepath), "/"), 1);
-    }
-
     /** 进行裁剪、打水印等其它处理 */
     public function saveFile($event)
     {
@@ -175,6 +166,7 @@ class DataController extends Controller
                 F::setflash('error','视频信息没有填写完整!');
             }
             $model->attributes=$_POST['Data'];
+            $model->extratype = implode(',',$_POST['Data']['extratype']);
 			if($model->save()){
               $palydataModel = new Playdata();
               $palydataModel->v_id = $model->id;
@@ -189,7 +181,6 @@ class DataController extends Controller
                   $tvcontent->save();
                }
                echo "<script type='text/javascript'>alert('添加成功！');location.href = 'admin'</script>";
-               exit;
             }
 		}
 
@@ -205,16 +196,46 @@ class DataController extends Controller
 	*/
 	public function actionUpdate($id)
 	{
-		$model=$this->loadModel($id);
-
+		//$model=$this->loadModel($id);
+        $model=Data::model()->with('playdata','datacontent')->findByPk($id);
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-
 		if(isset($_POST['Data']))
 		{
-			$model->attributes=$_POST['Data'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+            $playurl = empty($_POST['playurl']) ? '' : F::mergeUrlForm($_POST['playurl'],$_POST['playfrom']);
+            if($playurl == false || empty($playurl)){
+                F::setflash('error','视频信息没有填写完整!');
+            }
+            $palydata = F::transferUrl($_POST['playfrom'],$playurl);
+            if(!$palydata){
+                F::setflash('error','视频信息没有填写完整!');
+            }
+            $oldimage = $model->pic;
+
+            $model->attributes=$_POST['Data'];
+            $model->extratype = implode(',',$_POST['Data']['extratype']);
+            if($model->save()){
+                //删除图片
+                if($oldimage != $model->pic){
+                   $file = Yii::app()->basePath.'/../upload/'.$oldimage;
+                   if(is_file($file))@unlink($file);
+                }
+                Playdata::model()->deleteAll("v_id = ".$id);
+                $palydataModel = new Playdata();
+                $palydataModel->v_id = $model->id;
+                $palydataModel->tid = $model->tid;
+                $palydataModel->body = $palydata;
+                $palydataModel->save();
+                if(!empty($_POST['content'])){
+                    Content::model()->deleteAll("vid = ".$id);
+                    $tvcontent = new Content();
+                    $tvcontent->tid = $model->tid;
+                    $tvcontent->body = trim($_POST['content']);
+                    $tvcontent->vid = $model->id;
+                    $tvcontent->save();
+                }
+                echo "<script type='text/javascript'>alert('修改成功！');location.href = '".$this->createUrl('admin')."';</script>";
+            }
 		}
 
 		$this->render('update',array(

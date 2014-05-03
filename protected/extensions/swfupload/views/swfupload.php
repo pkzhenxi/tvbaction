@@ -53,6 +53,6 @@
 	<div id="fileProgressContainer_<?php echo $threadId?>"></div>
 	<div id="thumbnails_<?php echo $threadId?>">   
 	<?php foreach ($imgUrlList as $img):?>
-		      		<img style="margin: 5px; opacity: 1;" width="100" height="100" src="<?php echo $img?>">
+		  <img style="margin-left: 5px;"  src="<?php echo $img?>">
 	<?php endforeach;?>
 	</div>
