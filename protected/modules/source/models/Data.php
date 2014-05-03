@@ -285,7 +285,7 @@ class Data extends CActiveRecord
 		$criteria->compare('lang',$this->lang,true);
 		$criteria->compare('score',$this->score,true);
 		$criteria->compare('extratype',$this->extratype,true);
-        $criteria->order = 'updatetime DESC';
+        $criteria->order = 'addtime DESC';
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

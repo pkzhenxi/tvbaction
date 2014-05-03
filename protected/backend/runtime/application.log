@@ -7916,3 +7916,81 @@ Stack trace:
 REQUEST_URI=/tvbgit/backend.php/database/backup/admin
 HTTP_REFERER=http://localhost/tvbgit/backend.php/auth/assignment/index
 ---
+2014/05/03 14:44:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "recommand" 动作.' in F:\PHPCASE\tvbgit\framework\web\CController.php:483
+Stack trace:
+#0 F:\PHPCASE\tvbgit\framework\web\CController.php(270): CController->missingAction('recommand')
+#1 F:\PHPCASE\tvbgit\framework\web\CWebApplication.php(282): CController->run('recommand')
+#2 F:\PHPCASE\tvbgit\framework\web\CWebApplication.php(141): CWebApplication->runController('source/data/rec...')
+#3 F:\PHPCASE\tvbgit\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 F:\PHPCASE\tvbgit\backend.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/tvbgit/backend.php/source/data/recommand
+HTTP_REFERER=http://localhost/tvbgit/backend.php/source/dataCategory/admin
+---
+2014/05/03 15:12:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "cms/newsCategory/admin"。' in F:\PHPCASE\tvbgit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\PHPCASE\tvbgit\framework\web\CWebApplication.php(141): CWebApplication->runController('cms/newsCategor...')
+#1 F:\PHPCASE\tvbgit\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 F:\PHPCASE\tvbgit\backend.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/tvbgit/backend.php/cms/newsCategory/admin
+HTTP_REFERER=http://localhost/tvbgit/backend.php/source/data/admin
+---
+2014/05/03 15:29:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "source/http://localhost/tvbgit/backend.php/source/data/update/id/11"。' in F:\PHPCASE\tvbgit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\PHPCASE\tvbgit\framework\web\CWebApplication.php(141): CWebApplication->runController('source/http://l...')
+#1 F:\PHPCASE\tvbgit\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 F:\PHPCASE\tvbgit\backend.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/tvbgit/backend.php/source/http://localhost/tvbgit/backend.php/source/data/update/id/11
+HTTP_REFERER=http://localhost/tvbgit/backend.php/source/data/update/id/11
+---
+2014/05/03 15:33:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "source/vcomment/admin"。' in F:\PHPCASE\tvbgit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\PHPCASE\tvbgit\framework\web\CWebApplication.php(141): CWebApplication->runController('source/vcomment...')
+#1 F:\PHPCASE\tvbgit\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 F:\PHPCASE\tvbgit\backend.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/tvbgit/backend.php/source/vcomment/admin
+HTTP_REFERER=http://localhost/tvbgit/backend.php/source/data/commend
+---
+2014/05/03 15:33:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "recommand" 动作.' in F:\PHPCASE\tvbgit\framework\web\CController.php:483
+Stack trace:
+#0 F:\PHPCASE\tvbgit\framework\web\CController.php(270): CController->missingAction('recommand')
+#1 F:\PHPCASE\tvbgit\framework\web\CWebApplication.php(282): CController->run('recommand')
+#2 F:\PHPCASE\tvbgit\framework\web\CWebApplication.php(141): CWebApplication->runController('source/data/rec...')
+#3 F:\PHPCASE\tvbgit\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 F:\PHPCASE\tvbgit\backend.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/tvbgit/backend.php/source/data/recommand
+HTTP_REFERER=http://localhost/tvbgit/backend.php/source/vcomment/admin
+---
+2014/05/03 15:34:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "source/vcomment/admin"。' in F:\PHPCASE\tvbgit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\PHPCASE\tvbgit\framework\web\CWebApplication.php(141): CWebApplication->runController('source/vcomment...')
+#1 F:\PHPCASE\tvbgit\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 F:\PHPCASE\tvbgit\backend.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/tvbgit/backend.php/source/vcomment/admin
+HTTP_REFERER=http://localhost/tvbgit/backend.php/source/data/admin
+---
+2014/05/03 15:34:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "recommand" 动作.' in F:\PHPCASE\tvbgit\framework\web\CController.php:483
+Stack trace:
+#0 F:\PHPCASE\tvbgit\framework\web\CController.php(270): CController->missingAction('recommand')
+#1 F:\PHPCASE\tvbgit\framework\web\CWebApplication.php(282): CController->run('recommand')
+#2 F:\PHPCASE\tvbgit\framework\web\CWebApplication.php(141): CWebApplication->runController('source/data/rec...')
+#3 F:\PHPCASE\tvbgit\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 F:\PHPCASE\tvbgit\backend.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/tvbgit/backend.php/source/data/recommand
+HTTP_REFERER=http://localhost/tvbgit/backend.php/source/vcomment/admin
+---
+2014/05/03 15:34:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "source/vcomment/admin"。' in F:\PHPCASE\tvbgit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\PHPCASE\tvbgit\framework\web\CWebApplication.php(141): CWebApplication->runController('source/vcomment...')
+#1 F:\PHPCASE\tvbgit\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 F:\PHPCASE\tvbgit\backend.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/tvbgit/backend.php/source/vcomment/admin
+HTTP_REFERER=http://localhost/tvbgit/backend.php/source/data/commend
+---

@@ -28,7 +28,7 @@ class DataController extends Controller
             ),
             'toggle' => array(
                 'class'=>'bootstrap.actions.TbToggleAction',
-                'redirectRoute'=>array('admin'),
+                'redirectRoute'=>Yii::app()->request->urlReferrer,
                 'modelName' => 'Data',
             )
         );
@@ -123,7 +123,7 @@ class DataController extends Controller
      public function actionDatasubmit(){
          $idarr = $_POST['data-grid_c0'];
          $act = $_POST['act'];
-         if(empty($idarr) || empty($act)) $this->redirect(array('admin'));
+         if(empty($idarr) || empty($act)) $this->redirect(Yii::app()->request->urlReferrer);
          foreach($idarr as $id){
              $model = $this->loadModel($id);
              $model->$act = ($act != 'isunion') ? trim($_POST[$act]) : ( $model->$act == 0 ? 1 : 0 );
@@ -131,7 +131,7 @@ class DataController extends Controller
                  throw new CHttpException(404,'数据保存错误,请检查！');
              }
          }
-         $this->redirect(array('admin'));
+         $this->redirect(Yii::app()->request->urlReferrer);
      }
 
 
@@ -288,6 +288,22 @@ class DataController extends Controller
 			'model'=>$model,
 		));
 	}
+
+    /*
+     * commend data
+     */
+    public function actionCommend(){
+        $model=new Data('search');
+        $model->unsetAttributes();  // clear any default values
+        if(isset($_GET['Data'])){
+            $model->attributes=$_GET['Data'];
+        }
+        $model->commend = 5;
+        $this->render('admin',array(
+            'model'=>$model,
+        ));
+    }
+
 
 	/**
 	* Returns the data model based on the primary key given in the GET variable.

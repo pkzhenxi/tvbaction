@@ -9,7 +9,7 @@
                     '---',
                     array('label' => '视频分类', 'icon'=>'glass', 'url' => array('/source/dataCategory/admin')),
                     array('label' => '视频管理', 'icon'=>'film', 'url' => array('/source/data/admin')),
-                    array('label' => '推荐视频', 'icon'=>'th', 'url' => array('/source/data/recommand')),
+                    array('label' => '推荐视频', 'icon'=>'th', 'url' => array('/source/data/commend')),
                     array('label' => '视频评论', 'icon'=>'th-list', 'url' => array('/source/vcomment/admin')),
                     '---',
                     array('label' => '专辑管理', 'icon'=>'play-circle', 'url' => array('/source/album/admin')),
