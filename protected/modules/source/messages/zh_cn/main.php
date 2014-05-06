@@ -1,9 +1,9 @@
 <?php
 return array(
-   'Create Category' => '创建分类',
-   'Category Mange' => '分类管理',
-   'Data Mange' => '数据管理',
-   'Create Data'=> '添加数据',
+    'Create Category' => '创建分类',
+    'Category Mange' => '分类管理',
+    'Data Mange' => '数据管理',
+    'Create Data'=> '添加数据',
     'Update Data'=>'更新数据',
     'Id' => 'ID',
     'Tid' => '视频分类',
@@ -19,6 +19,13 @@ return array(
     'Updatetime'=>'更新时间',
     'Topic' => '专题',
     'Isunion'=>'锁定',
+    'Comment Mange'=>'视频评论',
+    'Msg'=>'评论内容',
+    'V_id'=>'评论视频名称',
+    'Ip'=>'评论者IP',
+    'Dtime'=>'评论时间',
+    'Username'=>'评论者',
+    'Ischeck'=>'审核',
 );
 
 ?>

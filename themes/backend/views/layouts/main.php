@@ -27,7 +27,7 @@ $this->widget('bootstrap.widgets.TbNavbar', array(
                     array('label' => '视频分类', 'url' => array('/source/dataCategory/admin')),
                     array('label' => '视频管理', 'url' => array('/source/data/admin')),
                     array('label' => '推荐视频', 'url' => array('/source/data/commend')),
-                    array('label' => '视频评论', 'url' => array('/source/vcomment/admin')),
+                    array('label' => '视频评论', 'url' => array('/source/comment/admin')),
                     '---',
                     array('label' => '专辑管理', 'url' => array('/source/album/admin')),
                     array('label' => '曲目管理', 'url' => array('/source/music/admin')),
