@@ -26,6 +26,7 @@ return array(
     'Dtime'=>'评论时间',
     'Username'=>'评论者',
     'Ischeck'=>'审核',
+    'Update Comment'=>'编辑评论',
 );
 
 ?>

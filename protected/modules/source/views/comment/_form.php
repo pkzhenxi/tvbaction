@@ -1,10 +1,8 @@
 <?php $form=$this->beginWidget('bootstrap.widgets.TbActiveForm',array(
 	'id'=>'comment-form',
+    'type' => 'horizontal',
 	'enableAjaxValidation'=>false,
 )); ?>
-
-<p class="help-block">Fields with <span class="required">*</span> are required.</p>
-
 <?php echo $form->errorSummary($model); ?>
 
 	<?php echo $form->textFieldRow($model,'uid',array('class'=>'span5')); ?>
