@@ -1,6 +1,6 @@
 <?php
 $this->breadcrumbs=array(
-	'Update',
+	SourceModule::t('Update Comment'),
 );
 ?>
 <?php echo $this->renderPartial('_form',array('model'=>$model)); ?>
