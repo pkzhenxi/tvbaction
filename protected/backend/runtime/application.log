@@ -8103,3 +8103,86 @@ Stack trace:
 REQUEST_URI=/tvbgit/backend.php/source/comment/admin
 HTTP_REFERER=http://localhost/tvbgit/backend.php/source/data/commend
 ---
+2014/05/10 14:25:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "cms/newsCategory/admin"。' in F:\PHPCASE\tvbgit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\PHPCASE\tvbgit\framework\web\CWebApplication.php(141): CWebApplication->runController('cms/newsCategor...')
+#1 F:\PHPCASE\tvbgit\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 F:\PHPCASE\tvbgit\backend.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/tvbgit/backend.php/cms/newsCategory/admin
+HTTP_REFERER=http://localhost/tvbgit/backend.php/source/comment/admin
+---
+2014/05/10 14:25:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "cms/news/admin"。' in F:\PHPCASE\tvbgit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\PHPCASE\tvbgit\framework\web\CWebApplication.php(141): CWebApplication->runController('cms/news/admin')
+#1 F:\PHPCASE\tvbgit\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 F:\PHPCASE\tvbgit\backend.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/tvbgit/backend.php/cms/news/admin
+HTTP_REFERER=http://localhost/tvbgit/backend.php/cms/newsCategory/admin
+---
+2014/05/10 14:26:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "cms/newsCategory/admin"。' in F:\PHPCASE\tvbgit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\PHPCASE\tvbgit\framework\web\CWebApplication.php(141): CWebApplication->runController('cms/newsCategor...')
+#1 F:\PHPCASE\tvbgit\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 F:\PHPCASE\tvbgit\backend.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/tvbgit/backend.php/cms/newsCategory/admin
+HTTP_REFERER=http://localhost/tvbgit/backend.php/siteconfig
+---
+2014/05/10 15:09:00 [warning] [application] Failed to set unsafe attribute "adminReply" of "Comment".
+in F:\PHPCASE\tvbgit\protected\modules\source\controllers\CommentController.php (79)
+in F:\PHPCASE\tvbgit\backend.php (14)
+2014/05/10 15:10:49 [warning] [application] Failed to set unsafe attribute "adminReply" of "Comment".
+in F:\PHPCASE\tvbgit\protected\modules\source\controllers\CommentController.php (79)
+in F:\PHPCASE\tvbgit\backend.php (14)
+2014/05/10 15:10:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in F:\PHPCASE\tvbgit\protected\modules\source\controllers\CommentController.php:146
+Stack trace:
+#0 F:\PHPCASE\tvbgit\protected\modules\source\controllers\CommentController.php(72): CommentController->loadModel('admin')
+#1 [internal function]: CommentController->actionUpdate('admin')
+#2 F:\PHPCASE\tvbgit\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(CommentController), Array)
+#3 F:\PHPCASE\tvbgit\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(CommentController), Object(ReflectionMethod), Array)
+#4 F:\PHPCASE\tvbgit\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 F:\PHPCASE\tvbgit\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 F:\PHPCASE\tvbgit\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 F:\PHPCASE\tvbgit\framework\web\filters\CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#8 F:\PHPCASE\tvbgit\framework\web\CController.php(291): CFilterChain->run()
+#9 F:\PHPCASE\tvbgit\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 F:\PHPCASE\tvbgit\framework\web\CWebApplication.php(282): CController->run('update')
+#11 F:\PHPCASE\tvbgit\framework\web\CWebApplication.php(141): CWebApplication->runController('source/comment/...')
+#12 F:\PHPCASE\tvbgit\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#13 F:\PHPCASE\tvbgit\backend.php(14): CApplication->run()
+#14 {main}
+REQUEST_URI=/tvbgit/backend.php/source/comment/update/id/admin
+HTTP_REFERER=http://localhost/tvbgit/backend.php/source/comment/update/id/1
+---
+2014/05/10 15:11:12 [warning] [application] Failed to set unsafe attribute "adminReply" of "Comment".
+in F:\PHPCASE\tvbgit\protected\modules\source\controllers\CommentController.php (79)
+in F:\PHPCASE\tvbgit\backend.php (14)
+2014/05/10 15:22:14 [warning] [application] Failed to set unsafe attribute "adminReply" of "Comment".
+in F:\PHPCASE\tvbgit\protected\modules\source\controllers\CommentController.php (79)
+in F:\PHPCASE\tvbgit\backend.php (14)
+2014/05/10 15:22:50 [warning] [application] Failed to set unsafe attribute "adminReply" of "Comment".
+in F:\PHPCASE\tvbgit\protected\modules\source\controllers\CommentController.php (79)
+in F:\PHPCASE\tvbgit\backend.php (14)
+2014/05/10 15:23:17 [warning] [application] Failed to set unsafe attribute "adminReply" of "Comment".
+in F:\PHPCASE\tvbgit\protected\modules\source\controllers\CommentController.php (79)
+in F:\PHPCASE\tvbgit\backend.php (14)
+2014/05/10 15:39:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "source/topic/admin"。' in F:\PHPCASE\tvbgit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\PHPCASE\tvbgit\framework\web\CWebApplication.php(141): CWebApplication->runController('source/topic/ad...')
+#1 F:\PHPCASE\tvbgit\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 F:\PHPCASE\tvbgit\backend.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/tvbgit/backend.php/source/topic/admin
+HTTP_REFERER=http://localhost/tvbgit/backend.php/source/comment/admin
+---
+2014/05/10 15:56:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "source/album/admin"。' in F:\PHPCASE\tvbgit\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\PHPCASE\tvbgit\framework\web\CWebApplication.php(141): CWebApplication->runController('source/album/ad...')
+#1 F:\PHPCASE\tvbgit\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 F:\PHPCASE\tvbgit\backend.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/tvbgit/backend.php/source/album/admin
+HTTP_REFERER=http://localhost/tvbgit/backend.php/source/data/admin
+---

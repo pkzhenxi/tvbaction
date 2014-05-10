@@ -77,8 +77,10 @@ class CommentController extends Controller
 		if(isset($_POST['Comment']))
 		{
 			$model->attributes=$_POST['Comment'];
+            $adminReply = trim(strip_tags($_POST['Comment']['adminReply']));
+            $model->msg = empty($adminReply) ? $model->msg : $model->msg.'<br/>'."<font color=red>管理员回复： $adminReply</font>\n";
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(array('admin'));
 		}
 
 		$this->render('update',array(
@@ -97,6 +99,8 @@ class CommentController extends Controller
 		{
 			// we only allow deletion via POST request
 			$this->loadModel($id)->delete();
+            //删除与其有关的回复
+            Comment::model()->deleteAll('reply='.$id);
 
 			// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 			if(!isset($_GET['ajax']))
