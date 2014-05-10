@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50508
 File Encoding         : 65001
 
-Date: 2014-05-10 16:36:56
+Date: 2014-05-10 16:47:58
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -76,7 +76,7 @@ CREATE TABLE `tv_album` (
   `time` datetime NOT NULL,
   `check` enum('0','1') NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of tv_album
@@ -352,14 +352,14 @@ CREATE TABLE `tv_data` (
   KEY `idx_addtime` (`addtime`),
   KEY `idx_name` (`name`,`tid`),
   KEY `idx_tid` (`tid`,`recycled`,`addtime`) USING BTREE
-) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of tv_data
 -- ----------------------------
 INSERT INTO `tv_data` VALUES ('7', '2', '流金岁月', '500', '201405/536de15e760e1.jpg', '200', '0', '0', '0', '0', '3', '0', '0', '罗嘉良', '#0000CC', '2014', '香港', '1396154264', '1399710049', '1', '', '', 'L', '0', '0', '', null, '粤语', '0', '');
-INSERT INTO `tv_data` VALUES ('11', '4', '叛逃', '10', '201405/53648ef305636.jpg', '300', '0', '0', '0', '0', '5', '0', '0', '吴x', '', '2014', '香港', '1397961098', '1399102776', '1', '', '', 'p', '0', '0', '未知', null, '粤语', '0', '3,4');
 INSERT INTO `tv_data` VALUES ('10', '2', '测试', '100', '201405/536de16a6617a.jpg', '220', '0', '0', '0', '0', '5', '0', '0', '刘德华', '#00FF00', '2004', '大陆', '1396849700', '1399710060', '1', '', '高清', 'C', '0', '0', '徐克', null, '粤语', '0', '');
+INSERT INTO `tv_data` VALUES ('11', '4', '叛逃', '10', '201405/53648ef305636.jpg', '300', '0', '0', '0', '0', '5', '0', '0', '吴x', '', '2014', '香港', '1397961098', '1399102776', '1', '', '', 'p', '0', '0', '未知', null, '粤语', '0', '3,4');
 
 -- ----------------------------
 -- Table structure for `tv_flink`
@@ -376,7 +376,7 @@ CREATE TABLE `tv_flink` (
   `dtime` int(10) unsigned NOT NULL DEFAULT '0',
   `ischeck` smallint(6) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of tv_flink
@@ -399,7 +399,7 @@ CREATE TABLE `tv_guestbook` (
   `msg` text,
   PRIMARY KEY (`id`),
   KEY `ischeck` (`ischeck`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of tv_guestbook
@@ -428,7 +428,7 @@ CREATE TABLE `tv_news` (
   PRIMARY KEY (`n_id`),
   KEY `tid` (`tid`,`n_hit`),
   KEY `v_addtime` (`n_inbase`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of tv_news
@@ -444,7 +444,7 @@ CREATE TABLE `tv_playdata` (
   `body` mediumtext,
   `body1` mediumtext,
   PRIMARY KEY (`v_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of tv_playdata
@@ -453,8 +453,8 @@ INSERT INTO `tv_playdata` VALUES ('7', '2', 'qvod$$第1集$ddd$qvod$$$百度影�
 INSERT INTO `tv_playdata` VALUES ('8', '3', 'qvod$$第1集$d$qvod', null);
 INSERT INTO `tv_playdata` VALUES ('9', '2', 'qvod$$第1集$d$qvod', null);
 INSERT INTO `tv_playdata` VALUES ('10', '2', 'qvod$$第1集$DADADAD$qvod$$$迅播高清$$第1集$DADADAD$gvod', null);
-INSERT INTO `tv_playdata` VALUES ('12', '4', '优酷$$第1集$dddddd$youku', null);
 INSERT INTO `tv_playdata` VALUES ('11', '3', 'qvod$$第1集$DADADAD$qvod$$$迅播高清$$第1集$DADADAD$gvod', null);
+INSERT INTO `tv_playdata` VALUES ('12', '4', '优酷$$第1集$dddddd$youku', null);
 
 -- ----------------------------
 -- Table structure for `tv_profile`
@@ -518,7 +518,7 @@ CREATE TABLE `tv_topic` (
   `des` text,
   PRIMARY KEY (`id`),
   KEY `sort` (`sort`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of tv_topic
