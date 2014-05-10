@@ -166,7 +166,7 @@ class DataController extends Controller
                 F::setflash('error','视频信息没有填写完整!');
             }
             $model->attributes=$_POST['Data'];
-            $model->extratype = implode(',',$_POST['Data']['extratype']);
+            $model->extratype = !empty($_POST['Data']['extratype']) ? implode(',',$_POST['Data']['extratype']) : '';
 			if($model->save()){
               $palydataModel = new Playdata();
               $palydataModel->v_id = $model->id;
@@ -213,7 +213,7 @@ class DataController extends Controller
             $oldimage = $model->pic;
 
             $model->attributes=$_POST['Data'];
-            $model->extratype = implode(',',$_POST['Data']['extratype']);
+            $model->extratype = !empty($_POST['Data']['extratype']) ? implode(',',$_POST['Data']['extratype']) : '';
             if($model->save()){
                 //删除图片
                 if($oldimage != $model->pic){
