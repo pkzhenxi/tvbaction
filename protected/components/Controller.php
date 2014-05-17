@@ -35,4 +35,30 @@ class Controller extends CController
            return true;
         }
     }
+
+    /** 进行裁剪、打水印等其它处理 */
+    public function saveFile($event)
+    {
+        //$event->sender['uploadedFile'] is CUploadedFile
+        //$event->sender['uploadedFile']->name; the original name of the file being uploaded
+        // $event->sender['name']  yourfilename.EXT
+        // do something   ......
+        $url = $event->sender['path'].$event->sender['name'];
+        if(is_file($url)){
+            $pic = new Picture();
+            $pic->cut['file'] = $url;
+            $pic->cut['width'] = 300;
+            $pic->cut['save_name'] = false;
+            $pic->cut['height'] = 300;
+            $pic->cut() === true or $pic_info = $pics->info;
+        }
+        /*
+         $im = imagecreatefromjpeg($src);
+         $textcolor = imagecolorallocate($im, 0, 0, 255);
+         imagestring($im, 2, 0, 0, 'lcswfupload onAfterUpload saveFile run', $textcolor);
+         imagejpeg($im,$src);
+         imagedestroy($im);
+        */
+        return true;
+    }
 }
