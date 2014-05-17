@@ -26,7 +26,7 @@ class Starcommend extends CWidget{
     }
 
     public function run(){
-        echo "<span id='star".$this->vid."'>123</span>";
+        echo "<span id='star".$this->vid."'></span>";
     }
 
     public function register($rtl=false){
