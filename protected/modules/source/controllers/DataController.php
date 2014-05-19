@@ -98,7 +98,7 @@ class DataController extends Controller
          $idarr = $_POST['data-grid_c0'];
          $act = $_POST['act'];
          if(empty($idarr) || empty($act)){
-            $_GET['Data'] = $_POST['Data'];
+            $_GET['Data'] = isset($_POST['Data']) ? $_POST['Data'] : $_GET['Data'];
             $this->actionAdmin();
          }else{
              foreach($idarr as $id){
