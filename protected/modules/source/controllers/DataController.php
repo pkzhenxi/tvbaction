@@ -97,15 +97,19 @@ class DataController extends Controller
      public function actionDatasubmit(){
          $idarr = $_POST['data-grid_c0'];
          $act = $_POST['act'];
-         if(empty($idarr) || empty($act)) $this->redirect(Yii::app()->request->urlReferrer);
-         foreach($idarr as $id){
-             $model = $this->loadModel($id);
-             $model->$act = ($act != 'isunion') ? trim($_POST[$act]) : ( $model->$act == 0 ? 1 : 0 );
-             if(!$model->save()){
-                 throw new CHttpException(404,'数据保存错误,请检查！');
+         if(empty($idarr) || empty($act)){
+            $_GET['Data'] = $_POST['Data'];
+            $this->actionAdmin();
+         }else{
+             foreach($idarr as $id){
+                 $model = $this->loadModel($id);
+                 $model->$act = ($act != 'isunion') ? trim($_POST[$act]) : ( $model->$act == 0 ? 1 : 0 );
+                 if(!$model->save()){
+                     throw new CHttpException(404,'数据保存错误,请检查！');
+                 }
              }
+             $this->redirect(Yii::app()->request->urlReferrer);
          }
-         $this->redirect(Yii::app()->request->urlReferrer);
      }
 
 
