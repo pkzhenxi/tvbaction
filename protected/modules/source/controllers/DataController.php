@@ -103,9 +103,13 @@ class DataController extends Controller
          }else{
              foreach($idarr as $id){
                  $model = $this->loadModel($id);
-                 $model->$act = ($act != 'isunion') ? trim($_POST[$act]) : ( $model->$act == 0 ? 1 : 0 );
-                 if(!$model->save()){
-                     throw new CHttpException(404,'数据保存错误,请检查！');
+                 if($act == 'delete'){
+                    $this->loadModel($id)->delete();
+                 }else{
+                     $model->$act = ($act != 'isunion') ? trim($_POST[$act]) : ( $model->$act == 0 ? 1 : 0 );
+                     if(!$model->save()){
+                         throw new CHttpException(404,'数据保存错误,请检查！');
+                     }
                  }
              }
              $this->redirect(Yii::app()->request->urlReferrer);

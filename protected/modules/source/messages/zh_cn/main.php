@@ -27,6 +27,14 @@ return array(
     'Username'=>'评论者',
     'Ischeck'=>'审核',
     'Update Comment'=>'编辑评论',
+    'Album Manage'=>'专辑管理',
+    'Create Album'=>'添加专辑',
+    'Album Update'=>'更新专辑',
+    'Ischeck'=>'审核',
+    'Album Name'=>'专辑名称',
+    'Album Vid'=>'所属视频',
+    'Album Recommend'=>'推荐',
+    'Album Time'=>'时间',
 );
 
 ?>

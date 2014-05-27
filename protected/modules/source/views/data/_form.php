@@ -27,7 +27,7 @@ if($model->isNewRecord) Yii::app()->clientScript->registerScript('script'.$this-
                     <td style="padding-left: 5px;">连载？</td>
                     <td>
                         <input type="checkbox" onclick="isViewState()" id="v_statebox" <?php if($model->state>0 && !$model->isNewRecord){ echo "checked"; } ?> />
-                        <span id="v_statespan" <?php if($model->state == 0 && !$model->isNewRecord ) echo "style=\"display:none\"" ?> >到第
+                        <span id="v_statespan" <?php if($model->state == 0 && $model->isNewRecord ) echo "style=\"display:none\"" ?> >到第
                         <?php echo $form->textField($model,'state',array("style"=>"width:30px;")); ?>
                         集</span>
                     </td>

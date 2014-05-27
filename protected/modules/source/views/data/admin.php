@@ -116,6 +116,20 @@ $this->menu=array(
                 }
             }
         );
+        $("#delbutton").click(
+            function(evt){
+                var checkedlen = checkid();
+                if(checkedlen == 0){
+                    alert('请选择ID！');
+                    return false;
+                }else{
+                    if(confirm('是否真的要删除？')){
+                        $("#act").val("delete");
+                        $("form[name=datasubmit]").submit();
+                    }
+                }
+            }
+        );
         zen.title2div('title2div');
     });
 

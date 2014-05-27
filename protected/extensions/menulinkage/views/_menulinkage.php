@@ -28,6 +28,6 @@ echo CHtml::dropDownList('vid','', array(),array('style'=>'margin:0px 10px 10px 
          };",
     )
 );
-echo CHtml::hiddenField('Album[vid]','',array('id'=>'Album_vid'));
-echo CHtml::textField('v_label','',array('id'=>'v_label_id'));
+/*echo CHtml::hiddenField('Album[vid]','',array('id'=>'Album_vid'));
+echo CHtml::textField('v_label','',array('id'=>'v_label_id'));*/
 ?>

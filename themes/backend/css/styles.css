@@ -14,6 +14,9 @@ body {
 #datatable .wid{
     width: 80px;
 }
+#datatable .wid100{
+    width: 100px;
+}
 #datatable select{
     width: auto;
 }
